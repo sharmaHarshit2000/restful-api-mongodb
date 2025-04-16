@@ -36,10 +36,10 @@ npm start
 
 🌐 API Endpoints
 
-Method	Route	        Description
-GET	    /api/users	        Get all users
-GET	    /api/users/:id	    Get user by MongoDB ObjectId
-POST	/api/user	        Add a new user
-PUT	    /api/user/:id	    Update a user by ObjectId
-DELETE	/api/user/:id	    Delete a user by ObjectId
+Method	 Route	            Description
+GET	     /api/users	        Get all users
+GET	     /api/users/:id	    Get user by MongoDB ObjectId
+POST	   /api/user	        Add a new user
+PUT	     /api/user/:id	    Update a user by ObjectId
+DELETE	 /api/user/:id	    Delete a user by ObjectId
 
