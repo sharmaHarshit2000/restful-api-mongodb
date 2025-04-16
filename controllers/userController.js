@@ -24,7 +24,7 @@ export const getUserByID = async (req, res) => {
 
     res.status(200).json(user);
   } catch (err) {
-    res.status(400).json({ message: "Invalid user ID." });
+    res.status(400).json({ message: "Invalid user ID, Please enter a valid user ID." });
   }
 };
 
@@ -61,7 +61,7 @@ export const updateUser = async (req, res) => {
       user: updatedUser,
     });
   } catch (err) {
-    res.status(400).json({ message: err.message });
+    res.status(400).json({ message: "Invalid user ID, Please enter a valid user ID." });
   }
 };
 
@@ -81,6 +81,6 @@ export const deleteUser = async (req, res) => {
       user: deletedUser,
     });
   } catch (err) {
-    res.status(400).json({ message: err.message });
+    res.status(400).json({ message: "Invalid user ID, Please enter a valid user ID." });
   }
 };
