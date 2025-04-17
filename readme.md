@@ -24,7 +24,7 @@ This is a RESTful API built with **Node.js**, **Express**, and **MongoDB** (via 
 
 ---
 
-## 📁 Project Setup
+## 📁 Project Setups
 
 ```bash
 git clone https://github.com/sharmaHarshit2000/restful-api-mongodb.git
@@ -39,7 +39,7 @@ npm start
 Method	 Route	            Description
 GET	     /api/users	        Get all users
 GET	     /api/users/:id	    Get user by MongoDB ObjectId
-POST	   /api/user	        Add a new user
+POST	 /api/user	        Add a new user
 PUT	     /api/user/:id	    Update a user by ObjectId
 DELETE	 /api/user/:id	    Delete a user by ObjectId
 

@@ -14,7 +14,7 @@ export const getAllUsers = async (req, res) => {
 // GET user by ID
 export const getUserByID = async (req, res) => {
   try {
-    // Find the user by id use Model.findById Method & got the id form req.params.id  
+    // Find the user by id use Model.findById Method & get the id form req.params.id
     const user = await User.findById(req.params.id);
 
     if (!user) {
@@ -25,7 +25,9 @@ export const getUserByID = async (req, res) => {
 
     res.status(200).json(user);
   } catch (err) {
-    res.status(400).json({ message: "Invalid user ID, Please enter a valid user ID." });
+    res
+      .status(400)
+      .json({ message: "Invalid user ID, Please enter a valid user ID." });
   }
 };
 
@@ -52,7 +54,7 @@ export const updateUser = async (req, res) => {
     const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, {
       // Retunrs the updated result
       new: true,
-      // Runs the validation as per user Schema 
+      // Runs the validation as per user Schema
       runValidators: true,
     });
 
@@ -68,7 +70,9 @@ export const updateUser = async (req, res) => {
       user: updatedUser,
     });
   } catch (err) {
-    res.status(400).json({ message: "Invalid user ID, Please enter a valid user ID." });
+    res
+      .status(400)
+      .json({ message: "Invalid user ID, Please enter a valid user ID." });
   }
 };
 
@@ -89,6 +93,8 @@ export const deleteUser = async (req, res) => {
       user: deletedUser,
     });
   } catch (err) {
-    res.status(400).json({ message: "Invalid user ID, Please enter a valid user ID." });
+    res
+      .status(400)
+      .json({ message: "Invalid user ID, Please enter a valid user ID." });
   }
 };
