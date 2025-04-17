@@ -22,7 +22,7 @@ const validateUser = (req, res, next) => {
       });
     }
   
-    next(); // Everything looks good, proceed to controller
+    next(); // Everything is fine , proceed to controller
   };
   
   export default validateUser;
